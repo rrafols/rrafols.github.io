@@ -1,2 +1,0 @@
-# rrafols.github.io
-blog
