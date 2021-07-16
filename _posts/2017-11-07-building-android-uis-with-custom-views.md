@@ -3,7 +3,7 @@ id: 519
 title: Building Android UIs with Custom Views
 date: 2017-11-07T12:15:52+00:00
 author: raimon
-layout: post
+layout: default
 guid: http://blog.rafols.org/?p=519
 permalink: /index.php/2017/11/07/building-android-uis-with-custom-views/
 image: /wp-content/uploads/2019/08/b06885-e1565361549420.png

@@ -3,7 +3,7 @@ id: 88
 title: 'Augmented Reality &#8211; I'
 date: 2010-07-26T00:43:05+00:00
 author: raimon
-layout: post
+layout: default
 guid: http://blog.rafols.org/?p=88
 permalink: /index.php/2010/07/26/augmented-reality-i/
 restapi_import_id:

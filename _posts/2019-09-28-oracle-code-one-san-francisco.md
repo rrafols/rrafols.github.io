@@ -3,7 +3,7 @@ id: 636
 title: 'Oracle Code One &#8211; San Francisco'
 date: 2019-09-28T16:46:24+00:00
 author: raimon
-layout: post
+layout: default
 guid: http://ec2-18-232-250-173.compute-1.amazonaws.com/?p=636
 permalink: /index.php/2019/09/28/oracle-code-one-san-francisco/
 image: /wp-content/uploads/2019/09/u20-oco19-logo.png

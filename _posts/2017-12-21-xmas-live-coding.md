@@ -3,7 +3,7 @@ id: 551
 title: xmas live-coding
 date: 2017-12-21T00:38:37+00:00
 author: raimon
-layout: post
+layout: default
 guid: http://blog.rafols.org/?p=551
 permalink: /index.php/2017/12/21/xmas-live-coding/
 image: /wp-content/uploads/2017/12/Screenshot-2019-08-09-at-15.29.51.png

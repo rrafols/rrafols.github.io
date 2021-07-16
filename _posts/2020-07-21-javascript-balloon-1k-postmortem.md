@@ -3,7 +3,7 @@ id: 652
 title: JavaScript Balloon 1k postmortem
 date: 2020-07-21T18:50:43+00:00
 author: raimon
-layout: post
+layout: default
 guid: http://ec2-18-232-250-173.compute-1.amazonaws.com/?p=652
 permalink: /index.php/2020/07/21/javascript-balloon-1k-postmortem/
 image: /wp-content/uploads/2020/07/Screenshot-2020-07-21-at-19.39.19.png

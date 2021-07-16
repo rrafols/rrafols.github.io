@@ -3,7 +3,7 @@ id: 101
 title: 'ADEG &#038; Canal Blau TV'
 date: 2011-02-10T19:05:56+00:00
 author: raimon
-layout: post
+layout: default
 guid: http://blog.rafols.org/?p=101
 permalink: /index.php/2011/02/10/adeg-canal-blau-tv/
 restapi_import_id:

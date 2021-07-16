@@ -3,7 +3,7 @@ id: 558
 title: 'Looping &#8211; js1k 2018 post mortem'
 date: 2018-03-08T18:54:21+00:00
 author: raimon
-layout: post
+layout: default
 guid: http://blog.rafols.org/?p=558
 permalink: /index.php/2018/03/08/looping-js1k-2018-post-mortem/
 timeline_notification:

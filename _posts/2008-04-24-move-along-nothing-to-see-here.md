@@ -3,7 +3,7 @@ id: 17
 title: Move along, nothing to see here..
 date: 2008-04-24T19:40:36+00:00
 author: raimon
-layout: post
+layout: default
 guid: http://blog.rafols.org/?p=3
 permalink: /index.php/2008/04/24/move-along-nothing-to-see-here/
 restapi_import_id:

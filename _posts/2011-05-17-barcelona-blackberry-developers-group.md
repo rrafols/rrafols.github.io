@@ -3,7 +3,7 @@ id: 134
 title: 'Barcelona BlackBerry Developer&#039;s Group'
 date: 2011-05-17T23:30:58+00:00
 author: raimon
-layout: post
+layout: default
 guid: http://blog.rafols.org/?p=134
 permalink: /index.php/2011/05/17/barcelona-blackberry-developers-group/
 restapi_import_id:

@@ -3,7 +3,7 @@ id: 254
 title: 'What your mom didn&#039;t tell you about autoboxing&#8230;'
 date: 2013-04-16T17:56:32+00:00
 author: raimon
-layout: post
+layout: default
 guid: http://blog.rafols.org/?p=254
 permalink: /index.php/2013/04/16/what-your-mom-didnt-tell-you-about-autoboxing/
 shareaholic_disable_share_buttons:

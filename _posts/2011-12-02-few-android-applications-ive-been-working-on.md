@@ -3,7 +3,7 @@ id: 171
 title: 'Few Android applications I&#039;ve been working on&#8230;'
 date: 2011-12-02T01:53:26+00:00
 author: raimon
-layout: post
+layout: default
 guid: http://blog.rafols.org/?p=171
 permalink: /index.php/2011/12/02/few-android-applications-ive-been-working-on/
 restapi_import_id:

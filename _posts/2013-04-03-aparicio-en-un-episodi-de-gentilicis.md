@@ -3,7 +3,7 @@ id: 236
 title: Aparició en un episodi de Gentilicis
 date: 2013-04-03T11:31:08+00:00
 author: raimon
-layout: post
+layout: default
 guid: http://blog.rafols.org/?p=236
 permalink: /index.php/2013/04/03/aparicio-en-un-episodi-de-gentilicis/
 shareaholic_disable_share_buttons:

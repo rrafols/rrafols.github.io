@@ -3,7 +3,7 @@ id: 351
 title: Speaking at mobile development conferences
 date: 2015-01-21T02:39:33+00:00
 author: raimon
-layout: post
+layout: default
 guid: http://blog.rafols.org/?p=351
 permalink: /index.php/2015/01/21/speaking-mobile-conferences/
 restapi_import_id:

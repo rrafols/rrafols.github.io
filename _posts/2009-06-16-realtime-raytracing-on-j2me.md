@@ -3,7 +3,7 @@ id: 52
 title: '&#039;Realtime&#039; raytracing on j2me'
 date: 2009-06-16T00:40:41+00:00
 author: raimon
-layout: post
+layout: default
 guid: http://blog.rafols.org/?p=52
 permalink: /index.php/2009/06/16/realtime-raytracing-on-j2me/
 restapi_import_id:

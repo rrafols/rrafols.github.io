@@ -3,7 +3,7 @@ id: 41
 title: 'Service2Media is hiring&#8230;'
 date: 2009-01-16T01:53:08+00:00
 author: raimon
-layout: post
+layout: default
 guid: http://blog.rafols.org/?p=41
 permalink: /index.php/2009/01/16/service2media-is-hiring/
 restapi_import_id:

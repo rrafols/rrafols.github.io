@@ -3,7 +3,7 @@ id: 307
 title: 'BcnDevCon Presentation &#8211; Improving Java &#038; Dalvik Code Performance'
 date: 2013-11-15T01:53:50+00:00
 author: raimon
-layout: post
+layout: default
 guid: http://blog.rafols.org/?p=307
 permalink: /index.php/2013/11/15/bcndevcon-presentation-improving-java-dalvik-code-performance/
 shareaholic_disable_share_buttons:

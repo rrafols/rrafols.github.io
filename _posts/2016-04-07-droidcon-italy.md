@@ -3,7 +3,7 @@ id: 429
 title: Droidcon Italy
 date: 2016-04-07T14:44:31+00:00
 author: raimon
-layout: post
+layout: default
 guid: http://blog.rafols.org/?p=429
 permalink: /index.php/2016/04/07/droidcon-italy/
 restapi_import_id:

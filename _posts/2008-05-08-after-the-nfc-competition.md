@@ -3,7 +3,7 @@ id: 19
 title: After the NFC competition…
 date: 2008-05-08T01:05:08+00:00
 author: raimon
-layout: post
+layout: default
 guid: http://blog.rafols.org/?p=14
 permalink: /index.php/2008/05/08/after-the-nfc-competition/
 restapi_import_id:

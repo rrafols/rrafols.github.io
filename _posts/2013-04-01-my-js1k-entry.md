@@ -3,7 +3,7 @@ id: 209
 title: My js1k entry
 date: 2013-04-01T00:18:25+00:00
 author: raimon
-layout: post
+layout: default
 guid: http://blog.rafols.org/?p=209
 permalink: /index.php/2013/04/01/my-js1k-entry/
 shareaholic_disable_share_buttons:

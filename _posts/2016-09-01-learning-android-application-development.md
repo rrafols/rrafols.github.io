@@ -3,7 +3,7 @@ id: 437
 title: Learning Android Application Development
 date: 2016-09-01T21:03:28+00:00
 author: raimon
-layout: post
+layout: default
 guid: http://blog.rafols.org/?p=437
 permalink: /index.php/2016/09/01/learning-android-application-development/
 restapi_import_id:

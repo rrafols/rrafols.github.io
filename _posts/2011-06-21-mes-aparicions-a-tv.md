@@ -3,7 +3,7 @@ id: 146
 title: Més aparicions a TV!
 date: 2011-06-21T09:53:57+00:00
 author: raimon
-layout: post
+layout: default
 guid: http://blog.rafols.org/?p=146
 permalink: /index.php/2011/06/21/mes-aparicions-a-tv/
 restapi_import_id:

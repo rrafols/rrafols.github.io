@@ -3,7 +3,7 @@ id: 380
 title: III Jornades Emprenedoria i Tècniques Institut Poblenou
 date: 2016-02-17T12:27:27+00:00
 author: raimon
-layout: post
+layout: default
 guid: http://blog.rafols.org/?p=380
 permalink: /index.php/2016/02/17/iii-jornades-emprenedoria-i-tecniques-institut-poblenou/
 restapi_import_id:

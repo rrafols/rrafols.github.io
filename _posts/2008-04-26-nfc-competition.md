@@ -3,7 +3,7 @@ id: 18
 title: NFC Competition
 date: 2008-04-26T00:53:38+00:00
 author: raimon
-layout: post
+layout: default
 guid: http://blog.rafols.org/?p=9
 permalink: /index.php/2008/04/26/nfc-competition/
 restapi_import_id:

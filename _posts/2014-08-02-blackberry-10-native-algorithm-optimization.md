@@ -3,7 +3,7 @@ id: 327
 title: 'BlackBerry 10 &#8211; Native algorithm optimization'
 date: 2014-08-02T04:57:06+00:00
 author: raimon
-layout: post
+layout: default
 guid: http://blog.rafols.org/?p=327
 permalink: /index.php/2014/08/02/blackberry-10-native-algorithm-optimization/
 restapi_import_id:

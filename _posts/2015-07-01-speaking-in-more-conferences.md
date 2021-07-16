@@ -3,7 +3,7 @@ id: 373
 title: Speaking in more conferences ;)
 date: 2015-07-01T19:28:29+00:00
 author: raimon
-layout: post
+layout: default
 guid: http://blog.rafols.org/?p=373
 permalink: /index.php/2015/07/01/speaking-in-more-conferences/
 restapi_import_id:

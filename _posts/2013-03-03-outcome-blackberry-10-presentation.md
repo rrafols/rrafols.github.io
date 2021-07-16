@@ -3,7 +3,7 @@ id: 193
 title: Outcome BlackBerry 10 presentation
 date: 2013-03-03T14:08:08+00:00
 author: raimon
-layout: post
+layout: default
 guid: http://blog.rafols.org/?p=193
 permalink: /index.php/2013/03/03/outcome-blackberry-10-presentation/
 shareaholic_disable_share_buttons:

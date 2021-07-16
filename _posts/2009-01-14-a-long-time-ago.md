@@ -3,7 +3,7 @@ id: 23
 title: A long time ago..
 date: 2009-01-14T02:49:11+00:00
 author: raimon
-layout: post
+layout: default
 guid: http://blog.rafols.org/?p=23
 permalink: /index.php/2009/01/14/a-long-time-ago/
 restapi_import_id:

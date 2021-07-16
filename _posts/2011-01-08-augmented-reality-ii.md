@@ -3,7 +3,7 @@ id: 97
 title: 'Augmented Reality &#8211; II'
 date: 2011-01-08T19:23:33+00:00
 author: raimon
-layout: post
+layout: default
 guid: http://blog.rafols.org/?p=97
 permalink: /index.php/2011/01/08/augmented-reality-ii/
 restapi_import_id:

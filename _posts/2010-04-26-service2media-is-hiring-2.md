@@ -3,7 +3,7 @@ id: 73
 title: Service2Media is hiring!
 date: 2010-04-26T20:12:11+00:00
 author: raimon
-layout: post
+layout: default
 guid: http://blog.rafols.org/?p=73
 permalink: /index.php/2010/04/26/service2media-is-hiring-2/
 restapi_import_id:

@@ -3,7 +3,7 @@ id: 203
 title: 'Presentation about Java Internals &#038; Java code injection'
 date: 2013-03-28T10:36:44+00:00
 author: raimon
-layout: post
+layout: default
 guid: http://blog.rafols.org/?p=203
 permalink: /index.php/2013/03/28/presentation-about-java-internals-java-code-injection/
 shareaholic_disable_share_buttons:
