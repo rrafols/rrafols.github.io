@@ -1,3 +1,5 @@
 url: http://blog.rafols.org
 name: Development mumbo jumbo
 description: ""
+
+theme: jekyll-theme-tactile
