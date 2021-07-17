@@ -18,7 +18,8 @@ tags:
 ---
 These last months I&#8217;ve been very busy writing a book about Android development. It covers from the very basics to application testing and using third party libraries to make your life as a developer easier.  
 It&#8217;s available both in ebook and printed format, if you&#8217;re interested, grab a copy!  
-[<img loading="lazy" class=" size-full wp-image-438 aligncenter" src="/wp-content/uploads/2016/09/img6117.jpg" alt="IMG6117" width="500" height="617" srcset="/wp-content/uploads/2016/09/img6117.jpg 500w, wp-content/uploads/2016/09/img6117-243x300.jpg 243w" sizes="(max-width: 500px) 100vw, 500px" />](https://www.packtpub.com/application-development/learning-android-application-development)  
+<a href="https://www.packtpub.com/application-development/learning-android-application-development"><img loading="lazy" src="/wp-content/uploads/2016/09/img6117.jpg" width="1024" /></a>
+
 **PacktPub**  
 <https://www.packtpub.com/application-development/learning-android-application-development>  
 **Amazon**  

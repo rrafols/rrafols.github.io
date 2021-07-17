@@ -17,7 +17,9 @@ tags:
   - performance
   - Speaking
 ---
-These days I am at [Droidcon Italy](http://it.droidcon.com/2016/) in the beautiful city of [Turin](https://en.wikipedia.org/wiki/Turin) and, earlier this morning, I gave a talk about Android performance from the point of view of bytecode (oh big surprise here)  
+These days I am at [Droidcon Italy](http://it.droidcon.com/2016/) in the beautiful city of [Turin](https://en.wikipedia.org/wiki/Turin) and, earlier this morning, I gave a talk about Android performance from the point of view of bytecode (oh big surprise here)
+
 Here are the slides:  
-[<img loading="lazy" src="/wp-content/uploads/2016/04/slide001.png" alt="Slide001" width="720" height="405" class="aligncenter size-full wp-image-431" srcset="/wp-content/uploads/2016/04/slide001.png 720w, wp-content/uploads/2016/04/slide001-300x169.png 300w" sizes="(max-width: 720px) 100vw, 720px" />](wp-content/uploads/2016/04/2016_04_droidcon_it.pdf)  
+[<img loading="lazy" src="/wp-content/uploads/2016/04/slide001.png" width="1024" />](/wp-content/uploads/2016/04/2016_04_droidcon_it.pdf)  
+
 [#perfmatters](https://twitter.com/search?q=%23perfmatters&src=typd)
