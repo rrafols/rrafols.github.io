@@ -8,3 +8,4 @@ gem "kramdown-parser-gfm"
 gem 'webrick'
 gem "jekyll", "~> 3.3"
 gem "jekyll-theme-tactile"
+gem "rouge"

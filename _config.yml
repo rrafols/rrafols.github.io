@@ -4,3 +4,9 @@ name: Development mumbo jumbo
 description: ""
 
 theme: jekyll-theme-tactile
+
+highlighter: rouge
+markdown: kramdown
+kramdown: 
+  input: GFM
+  hard_wrap: false

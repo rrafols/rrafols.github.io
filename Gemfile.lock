@@ -69,6 +69,7 @@ DEPENDENCIES
   jekyll (~> 3.3)
   jekyll-theme-tactile
   kramdown-parser-gfm
+  rouge
   webrick
 
 BUNDLED WITH
