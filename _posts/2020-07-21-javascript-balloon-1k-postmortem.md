@@ -13,7 +13,6 @@ tags:
   - demoscene
   - Javascript
 ---
-
 Last year was the last edition of <a rel="noreferrer noopener" href="https://js1k.com/" target="_blank">js1k</a>, a 1k JavaScript code golfing competition I usually took part. Last month, I saw a tweet by <a rel="noreferrer noopener" href="https://twitter.com/MaximeEuziere" target="_blank">Xem</a> that he was preparing a js1k successor: <a rel="noreferrer noopener" href="https://js1024.fun/" target="_blank">js1024.fun</a> so I decided I must take part as well even though I had very limited time 😎.
 
 The end result can be found <a rel="noreferrer noopener" href="https://js1024.fun/demos/2020/44" target="_blank">here</a>, but I&#8217;ll go through the development process to explain what I wanted to do and what I did at the end (and how!)
