@@ -6,7 +6,9 @@ title: Development mumbo jumbo
   {% for post in site.posts %}
     <li>
       <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-      {{ post.excerpt }}
+      {% if forloop.index < 5 %}
+        {{ post.excerpt }}
+      {% endif %}
     </li>
   {% endfor %}
-/ul>
+</ul>

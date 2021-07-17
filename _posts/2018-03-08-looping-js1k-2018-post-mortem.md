@@ -17,7 +17,7 @@ tags:
 ---
 For this year&#8217;s <a href="http://js1k.com/2018-coins/" target="_blank" rel="noopener noreferrer">js1k</a> I wanted to build a simple ray-tracer to see both how much could I fit in 1k and the performance of js.  
 I started by adding a very simple (trivial) camera implementation and adding a sphere primitive:  
-<img loading="lazy" class="alignnone size-full wp-image-559" src="http://ec2-18-232-250-173.compute-1.amazonaws.com/wp-content/uploads/2018/03/shim_01.png" alt="shim_01" width="3096" height="1978" srcset="http://blog.rafols.org/wp-content/uploads/2018/03/shim_01.png 3096w, http://blog.rafols.org/wp-content/uploads/2018/03/shim_01-300x192.png 300w, http://blog.rafols.org/wp-content/uploads/2018/03/shim_01-768x491.png 768w, http://blog.rafols.org/wp-content/uploads/2018/03/shim_01-1024x654.png 1024w" sizes="(max-width: 3096px) 100vw, 3096px" />  
+<img loading="lazy" class="alignnone size-full wp-image-559" src="/wp-content/uploads/2018/03/shim_01.png" alt="shim_01" width="3096" height="1978" srcset="/wp-content/uploads/2018/03/shim_01.png 3096w, wp-content/uploads/2018/03/shim_01-300x192.png 300w, wp-content/uploads/2018/03/shim_01-768x491.png 768w, wp-content/uploads/2018/03/shim_01-1024x654.png 1024w" sizes="(max-width: 3096px) 100vw, 3096px" />  
 Results where not mind blowing but, hey, that was a start. Code was pretty simple:
 
 <pre>//w = canvas width
@@ -161,7 +161,7 @@ if(os[0] != -1) {
 </pre>
 
 Results are quite &#8216;gouradish&#8217;:  
-<img loading="lazy" class="alignnone size-full wp-image-560" src="http://ec2-18-232-250-173.compute-1.amazonaws.com/wp-content/uploads/2018/03/shim_02.png" alt="shim_02" width="3096" height="1978" srcset="http://blog.rafols.org/wp-content/uploads/2018/03/shim_02.png 3096w, http://blog.rafols.org/wp-content/uploads/2018/03/shim_02-300x192.png 300w, http://blog.rafols.org/wp-content/uploads/2018/03/shim_02-768x491.png 768w, http://blog.rafols.org/wp-content/uploads/2018/03/shim_02-1024x654.png 1024w" sizes="(max-width: 3096px) 100vw, 3096px" />  
+<img loading="lazy" class="alignnone size-full wp-image-560" src="/wp-content/uploads/2018/03/shim_02.png" alt="shim_02" width="3096" height="1978" srcset="/wp-content/uploads/2018/03/shim_02.png 3096w, wp-content/uploads/2018/03/shim_02-300x192.png 300w, wp-content/uploads/2018/03/shim_02-768x491.png 768w, wp-content/uploads/2018/03/shim_02-1024x654.png 1024w" sizes="(max-width: 3096px) 100vw, 3096px" />  
 So, let&#8217;s add a specular component to the light:
 
 <pre>// compute the reflection of the ray
@@ -183,22 +183,22 @@ ls=ls0.0){
 </pre>
 
 And here the result:  
-<img loading="lazy" class="alignnone size-full wp-image-561" src="http://ec2-18-232-250-173.compute-1.amazonaws.com/wp-content/uploads/2018/03/shim_03.png" alt="shim_03" width="3096" height="1978" srcset="http://blog.rafols.org/wp-content/uploads/2018/03/shim_03.png 3096w, http://blog.rafols.org/wp-content/uploads/2018/03/shim_03-300x192.png 300w, http://blog.rafols.org/wp-content/uploads/2018/03/shim_03-768x491.png 768w, http://blog.rafols.org/wp-content/uploads/2018/03/shim_03-1024x654.png 1024w" sizes="(max-width: 3096px) 100vw, 3096px" />  
+<img loading="lazy" class="alignnone size-full wp-image-561" src="/wp-content/uploads/2018/03/shim_03.png" alt="shim_03" width="3096" height="1978" srcset="/wp-content/uploads/2018/03/shim_03.png 3096w, wp-content/uploads/2018/03/shim_03-300x192.png 300w, wp-content/uploads/2018/03/shim_03-768x491.png 768w, wp-content/uploads/2018/03/shim_03-1024x654.png 1024w" sizes="(max-width: 3096px) 100vw, 3096px" />  
 We can also play with the specular exponent. Below the differences between 20, 8 and 2:
 
 <div id='gallery-1' class='gallery galleryid-558 gallery-columns-3 gallery-size-thumbnail'>
   <figure class='gallery-item'> 
   
   <div class='gallery-icon landscape'>
-    <a href='http://blog.rafols.org/index.php/2018/03/08/looping-js1k-2018-post-mortem/screen-shot-2018-03-08-at-13-41-52/'><img width="150" height="150" src="http://blog.rafols.org/wp-content/uploads/2018/03/screen-shot-2018-03-08-at-13-41-52-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" srcset="http://blog.rafols.org/wp-content/uploads/2018/03/screen-shot-2018-03-08-at-13-41-52-150x150.png 150w, http://blog.rafols.org/wp-content/uploads/2018/03/screen-shot-2018-03-08-at-13-41-52-100x100.png 100w" sizes="(max-width: 150px) 100vw, 150px" /></a>
+    <a href='http://blog.rafols.org/index.php/2018/03/08/looping-js1k-2018-post-mortem/screen-shot-2018-03-08-at-13-41-52/'><img width="150" height="150" src="/wp-content/uploads/2018/03/screen-shot-2018-03-08-at-13-41-52-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" srcset="/wp-content/uploads/2018/03/screen-shot-2018-03-08-at-13-41-52-150x150.png 150w, wp-content/uploads/2018/03/screen-shot-2018-03-08-at-13-41-52-100x100.png 100w" sizes="(max-width: 150px) 100vw, 150px" /></a>
   </div></figure><figure class='gallery-item'> 
   
   <div class='gallery-icon landscape'>
-    <a href='http://blog.rafols.org/index.php/2018/03/08/looping-js1k-2018-post-mortem/screen-shot-2018-03-08-at-13-41-31/'><img width="150" height="150" src="http://blog.rafols.org/wp-content/uploads/2018/03/screen-shot-2018-03-08-at-13-41-31-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" srcset="http://blog.rafols.org/wp-content/uploads/2018/03/screen-shot-2018-03-08-at-13-41-31-150x150.png 150w, http://blog.rafols.org/wp-content/uploads/2018/03/screen-shot-2018-03-08-at-13-41-31-100x100.png 100w" sizes="(max-width: 150px) 100vw, 150px" /></a>
+    <a href='http://blog.rafols.org/index.php/2018/03/08/looping-js1k-2018-post-mortem/screen-shot-2018-03-08-at-13-41-31/'><img width="150" height="150" src="/wp-content/uploads/2018/03/screen-shot-2018-03-08-at-13-41-31-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" srcset="/wp-content/uploads/2018/03/screen-shot-2018-03-08-at-13-41-31-150x150.png 150w, wp-content/uploads/2018/03/screen-shot-2018-03-08-at-13-41-31-100x100.png 100w" sizes="(max-width: 150px) 100vw, 150px" /></a>
   </div></figure><figure class='gallery-item'> 
   
   <div class='gallery-icon landscape'>
-    <a href='http://blog.rafols.org/index.php/2018/03/08/looping-js1k-2018-post-mortem/screen-shot-2018-03-08-at-13-41-16/'><img width="150" height="150" src="http://blog.rafols.org/wp-content/uploads/2018/03/screen-shot-2018-03-08-at-13-41-16-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" srcset="http://blog.rafols.org/wp-content/uploads/2018/03/screen-shot-2018-03-08-at-13-41-16-150x150.png 150w, http://blog.rafols.org/wp-content/uploads/2018/03/screen-shot-2018-03-08-at-13-41-16-100x100.png 100w" sizes="(max-width: 150px) 100vw, 150px" /></a>
+    <a href='http://blog.rafols.org/index.php/2018/03/08/looping-js1k-2018-post-mortem/screen-shot-2018-03-08-at-13-41-16/'><img width="150" height="150" src="/wp-content/uploads/2018/03/screen-shot-2018-03-08-at-13-41-16-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" srcset="/wp-content/uploads/2018/03/screen-shot-2018-03-08-at-13-41-16-150x150.png 150w, wp-content/uploads/2018/03/screen-shot-2018-03-08-at-13-41-16-100x100.png 100w" sizes="(max-width: 150px) 100vw, 150px" /></a>
   </div></figure>
 </div>
 
@@ -219,7 +219,7 @@ if(sh[0]==-1){
 </pre>
 
 Result starts to look pretty decent:  
-<img loading="lazy" class="alignnone size-full wp-image-562" src="http://ec2-18-232-250-173.compute-1.amazonaws.com/wp-content/uploads/2018/03/shim_05.png" alt="shim_05" width="3096" height="1978" srcset="http://blog.rafols.org/wp-content/uploads/2018/03/shim_05.png 3096w, http://blog.rafols.org/wp-content/uploads/2018/03/shim_05-300x192.png 300w, http://blog.rafols.org/wp-content/uploads/2018/03/shim_05-768x491.png 768w, http://blog.rafols.org/wp-content/uploads/2018/03/shim_05-1024x654.png 1024w" sizes="(max-width: 3096px) 100vw, 3096px" />  
+<img loading="lazy" class="alignnone size-full wp-image-562" src="/wp-content/uploads/2018/03/shim_05.png" alt="shim_05" width="3096" height="1978" srcset="/wp-content/uploads/2018/03/shim_05.png 3096w, wp-content/uploads/2018/03/shim_05-300x192.png 300w, wp-content/uploads/2018/03/shim_05-768x491.png 768w, wp-content/uploads/2018/03/shim_05-1024x654.png 1024w" sizes="(max-width: 3096px) 100vw, 3096px" />  
 I&#8217;ve also added another primitive: a horizontal plane:
 
 <pre>if(sl[k*S+7] == 0) {
@@ -282,7 +282,7 @@ if(sl[os[0]*S+7]==0) {
 </pre>
 
 Result was the following:  
-<img loading="lazy" class="alignnone size-full wp-image-563" src="http://ec2-18-232-250-173.compute-1.amazonaws.com/wp-content/uploads/2018/03/shim_07.png" alt="shim_07" width="3096" height="1978" srcset="http://blog.rafols.org/wp-content/uploads/2018/03/shim_07.png 3096w, http://blog.rafols.org/wp-content/uploads/2018/03/shim_07-300x192.png 300w, http://blog.rafols.org/wp-content/uploads/2018/03/shim_07-768x491.png 768w, http://blog.rafols.org/wp-content/uploads/2018/03/shim_07-1024x654.png 1024w" sizes="(max-width: 3096px) 100vw, 3096px" />  
+<img loading="lazy" class="alignnone size-full wp-image-563" src="/wp-content/uploads/2018/03/shim_07.png" alt="shim_07" width="3096" height="1978" srcset="/wp-content/uploads/2018/03/shim_07.png 3096w, wp-content/uploads/2018/03/shim_07-300x192.png 300w, wp-content/uploads/2018/03/shim_07-768x491.png 768w, wp-content/uploads/2018/03/shim_07-1024x654.png 1024w" sizes="(max-width: 3096px) 100vw, 3096px" />  
 We&#8217;re still missing one key feature of raytracers, reflections! In order to add reflections, we need to create a function that calculates the intersection & computes the resulting color. We&#8217;ll call it recursively:
 
 <pre>// if reflection index is smaller than 3, compute a reflected ray color & merge it with current color (70% + 30%)
@@ -296,7 +296,7 @@ if(rc &lt; 3) {
 </pre>
 
 By adding reflections, looks slightly better:  
-<img loading="lazy" class="alignnone size-full wp-image-564" src="http://ec2-18-232-250-173.compute-1.amazonaws.com/wp-content/uploads/2018/03/shim_08.png" alt="shim_08" width="3096" height="1978" srcset="http://blog.rafols.org/wp-content/uploads/2018/03/shim_08.png 3096w, http://blog.rafols.org/wp-content/uploads/2018/03/shim_08-300x192.png 300w, http://blog.rafols.org/wp-content/uploads/2018/03/shim_08-768x491.png 768w, http://blog.rafols.org/wp-content/uploads/2018/03/shim_08-1024x654.png 1024w" sizes="(max-width: 3096px) 100vw, 3096px" />  
+<img loading="lazy" class="alignnone size-full wp-image-564" src="/wp-content/uploads/2018/03/shim_08.png" alt="shim_08" width="3096" height="1978" srcset="/wp-content/uploads/2018/03/shim_08.png 3096w, wp-content/uploads/2018/03/shim_08-300x192.png 300w, wp-content/uploads/2018/03/shim_08-768x491.png 768w, wp-content/uploads/2018/03/shim_08-1024x654.png 1024w" sizes="(max-width: 3096px) 100vw, 3096px" />  
 Also, as you could see in this last screenshot, there was an small intent of CSG (Constructive Solid Geometry). I added a sphere that was &#8216;substracting&#8217; from other primitives.  
 At the end, I managed to fix the CSG intersection code. In order to make it work we&#8217;ve to calculate both the minimum and the maximum &#8216;t&#8217; of the ray intersection and work out all the different options:
 
@@ -356,7 +356,7 @@ In addition, I also added another primitive: a vertical cylinder.
 </pre>
 
 And here is the result:  
-<img loading="lazy" class="alignnone size-full wp-image-565" src="http://ec2-18-232-250-173.compute-1.amazonaws.com/wp-content/uploads/2018/03/shim_09.png" alt="shim_09" width="2076" height="1328" srcset="http://blog.rafols.org/wp-content/uploads/2018/03/shim_09.png 2076w, http://blog.rafols.org/wp-content/uploads/2018/03/shim_09-300x192.png 300w, http://blog.rafols.org/wp-content/uploads/2018/03/shim_09-768x491.png 768w, http://blog.rafols.org/wp-content/uploads/2018/03/shim_09-1024x655.png 1024w" sizes="(max-width: 2076px) 100vw, 2076px" /> 
+<img loading="lazy" class="alignnone size-full wp-image-565" src="/wp-content/uploads/2018/03/shim_09.png" alt="shim_09" width="2076" height="1328" srcset="/wp-content/uploads/2018/03/shim_09.png 2076w, wp-content/uploads/2018/03/shim_09-300x192.png 300w, wp-content/uploads/2018/03/shim_09-768x491.png 768w, wp-content/uploads/2018/03/shim_09-1024x655.png 1024w" sizes="(max-width: 2076px) 100vw, 2076px" /> 
 
 Unfortunately, after using Uglify (<https://github.com/mishoo/UglifyJS>) and RegPack (<http://siorki.github.io/regPack.html>) the resulting size was over 1600 bytes so I had to start a heavy optimization to get it under 1024. I removed the CSG intersection code :(, simplified the RGB filling color to:
 

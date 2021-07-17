@@ -25,19 +25,19 @@ My small contribution to start creating this conscience of mobile apps and mobil
 <img loading="lazy" alt="" src="https://androidmarket.googleusercontent.com/android/market/com.oocit.diaridevilanova/ss-480-1-7" class="alignnone" width="480" height="800" />  
 <img loading="lazy" alt="" src="https://androidmarket.googleusercontent.com/android/market/com.oocit.diaridevilanova/ss-480-2-7" class="alignnone" width="480" height="800" />  
 QR Code:  
-<img loading="lazy" src="http://blog.rafols.org/wp-content/uploads/qr_diarivilanova.png" alt="qr_diarivilanova" title="qr_diarivilanova" width="350" height="350" class="alignnone size-full wp-image-174" />  
+<img loading="lazy" src="/wp-content/uploads/qr_diarivilanova.png" alt="qr_diarivilanova" title="qr_diarivilanova" width="350" height="350" class="alignnone size-full wp-image-174" />  
 &#8211; Fira Novembre (November Fair of Vilanova i la Geltrú)  
 <https://market.android.com/details?id=com.oocit.firanovembre2011>  
 <img loading="lazy" alt="" src="https://lh6.ggpht.com/o_k0g5PnRaWexxdD9ww_U0iD5-PYzndQed-8K04vf6T3TBX35IMpQSVaNK_HXsbAV0kL" class="alignnone" width="480" height="800" />  
 <img loading="lazy" alt="" src="https://lh5.ggpht.com/O1y-GQKMxS__9vtdnEo4Jsrrtiy67taUy66ytnhodYId3q8BFL9lr5IMdpiBXq1lKCY" class="alignnone" width="480" height="800" />  
 <img loading="lazy" alt="" src="https://lh6.ggpht.com/HeyEISKM_J2w36CX5wg-pf53hH0l0YtQU3E8H6oJlkf4EGDac1sWblfbKzHhL36Y-i4" class="alignnone" width="480" height="800" />  
 QR Code:  
-<img loading="lazy" src="http://blog.rafols.org/wp-content/uploads/qr_firanovembre.png" alt="qr_firanovembre" title="qr_firanovembre" width="350" height="350" class="alignnone size-full wp-image-175" />  
+<img loading="lazy" src="/wp-content/uploads/qr_firanovembre.png" alt="qr_firanovembre" title="qr_firanovembre" width="350" height="350" class="alignnone size-full wp-image-175" />  
 &#8211; Festa Major (Local Festivities of Vilanova i la Geltrú)  
 <https://market.android.com/details?id=com.oocit.festamajor2011>  
 <img loading="lazy" alt="" src="https://androidmarket.googleusercontent.com/android/market/com.oocit.festamajor2011/ss-480-0-1" class="alignnone" width="480" height="800" />  
 <img loading="lazy" alt="" src="https://androidmarket.googleusercontent.com/android/market/com.oocit.festamajor2011/ss-480-1-1" class="alignnone" width="480" height="800" />  
 <img loading="lazy" alt="" src="https://androidmarket.googleusercontent.com/android/market/com.oocit.festamajor2011/ss-480-3-1" class="alignnone" width="480" height="800" />  
 QR Code:  
-<img loading="lazy" src="http://ec2-18-232-250-173.compute-1.amazonaws.com/wp-content/uploads/2011/12/qr_festamajor.png" alt="qr_festamajor" title="qr_festamajor" width="350" height="350" class="alignnone size-full wp-image-176" srcset="http://blog.rafols.org/wp-content/uploads/2011/12/qr_festamajor.png 350w, http://blog.rafols.org/wp-content/uploads/2011/12/qr_festamajor-150x150.png 150w, http://blog.rafols.org/wp-content/uploads/2011/12/qr_festamajor-300x300.png 300w, http://blog.rafols.org/wp-content/uploads/2011/12/qr_festamajor-100x100.png 100w" sizes="(max-width: 350px) 100vw, 350px" />  
+<img loading="lazy" src="/wp-content/uploads/2011/12/qr_festamajor.png" alt="qr_festamajor" title="qr_festamajor" width="350" height="350" class="alignnone size-full wp-image-176" srcset="/wp-content/uploads/2011/12/qr_festamajor.png 350w, wp-content/uploads/2011/12/qr_festamajor-150x150.png 150w, wp-content/uploads/2011/12/qr_festamajor-300x300.png 300w, wp-content/uploads/2011/12/qr_festamajor-100x100.png 100w" sizes="(max-width: 350px) 100vw, 350px" />  
 ![](http://labs.rafols.org/img.php?id=androidqr-post)

@@ -18,10 +18,10 @@ tags:
 ---
 When looking for performance it&#8217;s important to understand what is going on at the compiler level and how the compiler is optimising our code. For example, enabling the assembly output will allow us to see what is exactly generating and have a greater understanding of why some parts of the code execute faster or the reason why it&#8217;s not performing as it should.  
 BlackBerry 10 uses the QCC compiler (more information here: [QCC](https://developer.blackberry.com/native/reference/core/com.qnx.doc.neutrino.utilities/topic/q/qcc.html?f=qcc "qcc")). Enabling the right flags will generate a .s file of the generated assembly:  
-[<img src="http://blog.rafols.org/wp-content/uploads/qcc_flags2.png" alt="qcc_flags2" class="alignnone size-medium wp-image-329" />](http://blog.rafols.org/wp-content/uploads/qcc_flags2.png)  
-[<img src="http://blog.rafols.org/wp-content/uploads/qcc_flags3.png" alt="qcc_flags3" class="alignnone size-medium wp-image-328" />](http://blog.rafols.org/wp-content/uploads/qcc_flags3.png)  
+[<img src="/wp-content/uploads/qcc_flags2.png" alt="qcc_flags2" class="alignnone size-medium wp-image-329" />](wp-content/uploads/qcc_flags2.png)  
+[<img src="/wp-content/uploads/qcc_flags3.png" alt="qcc_flags3" class="alignnone size-medium wp-image-328" />](wp-content/uploads/qcc_flags3.png)  
 Once we got the flags enabled we can start optimising the code. Let&#8217;s take as example a YUV2RGB converter and optimise it for BlackBerry 10 devices (used in this app <http://appworld.blackberry.com/webstore/content/21198027/>) . This converter can be used to read from camera preview buffers and convert it to RGB to save it as an image or show it on the screen. [YUV](http://en.wikipedia.org/wiki/YUV) is a format the encodes luma & chroma independently:  
-[<img src="http://blog.rafols.org/wp-content/uploads/yuv_format.png" alt="yuv_format" class="alignnone size-medium wp-image-331" />](http://blog.rafols.org/wp-content/uploads/yuv_format.png)  
+[<img src="/wp-content/uploads/yuv_format.png" alt="yuv_format" class="alignnone size-medium wp-image-331" />](wp-content/uploads/yuv_format.png)  
 To make this example simpler, assume the following values (hardcoded from a camera preview buffer size)
 
 <pre>int src_height = 768;
@@ -231,5 +231,5 @@ void inline renderFrame(unsigned char *src, char *dst, int rect[4], int frame, i
 
 **Execution time**  
 Small graph showing the execution time of the same function with different optimisations. At the end we achieved around 600% performance increase.  
-[<img src="http://blog.rafols.org/wp-content/uploads/exec_time.png" alt="exec_time" class="alignnone size-medium wp-image-348" />](http://blog.rafols.org/wp-content/uploads/exec_time.png)  
+[<img src="/wp-content/uploads/exec_time.png" alt="exec_time" class="alignnone size-medium wp-image-348" />](wp-content/uploads/exec_time.png)  
 There are still quite a lot of things than can be done, stay tuned for the second part of this post!

@@ -22,7 +22,7 @@ tags:
 I was thinking to take part into the javascript 1k competition (<a href="http://js1k.com/2013-spring/" target="_blank" rel="noopener noreferrer">here</a>) but as I didn&#8217;t had too much free time and never really did that much in javascript targeting at 1k, I discarded the idea. Until I got a very ambitious idea the last day before the deadline.. how appropriate.. So I started trying few things and, to be honest, they didn&#8217;t work as I expected.. so I saved my ambitious idea for the next competition 😉  
 At the end, as I was already programming in Javascript I did a waving catalan flag in roughly 1k without paying attention to optimization. Pretty simple but enough for being my first time on a 1k javascript competition. Anyway, after doing some basic optimizations I still got a couple hundred bytes left so I&#8217;ve decided to add some extras. Check the demo for more details 🙂  
 Click the image below for the demo:  
-<a href="http://js1k.com/2013-spring/demo/1537" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="http://blog.rafols.org/wp-content/uploads/Screen-Shot-2013-04-01-at-1.11.46-AM-300x161.png" alt="Screen Shot 2013-04-01 at 1.11.46 AM" width="300" height="161" class="alignnone size-medium wp-image-218" /></a>  
+<a href="http://js1k.com/2013-spring/demo/1537" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="/wp-content/uploads/Screen-Shot-2013-04-01-at-1.11.46-AM-300x161.png" alt="Screen Shot 2013-04-01 at 1.11.46 AM" width="300" height="161" class="alignnone size-medium wp-image-218" /></a>  
 Just in case anyone is interested here is the fully _uncompressed_ code with few comments.
 
 <pre>k = 0
