@@ -17,3 +17,8 @@ I just had a small special request, to explain how I created my 2016 [js1k entry
 At the end, I showed how to build a very simple snowman only using plain 2D primitives, but simulating, _more or less_, a 3D effect.
 
 Below there is the result:
+<iframe style="width: 100%; height: 400px" scrolling="no" title="Xmas 2017" src="https://codepen.io/rrafols/embed/ypJjVe?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/rrafols/pen/ypJjVe">
+  Xmas 2017</a> by Raimon Rafols (<a href="https://codepen.io/rrafols">@rrafols</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>

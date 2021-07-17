@@ -17,12 +17,13 @@ tags:
 ---
 For this year&#8217;s <a href="http://js1k.com/2018-coins/" target="_blank" rel="noopener noreferrer">js1k</a> I wanted to build a simple ray-tracer to see both how much could I fit in 1k and the performance of js.  
 I started by adding a very simple (trivial) camera implementation and adding a sphere primitive:  
-<img loading="lazy" class="alignnone size-full wp-image-559" src="/wp-content/uploads/2018/03/shim_01.png" alt="shim_01" width="3096" height="1978" srcset="/wp-content/uploads/2018/03/shim_01.png 3096w, wp-content/uploads/2018/03/shim_01-300x192.png 300w, wp-content/uploads/2018/03/shim_01-768x491.png 768w, wp-content/uploads/2018/03/shim_01-1024x654.png 1024w" sizes="(max-width: 3096px) 100vw, 3096px" />  
-Results where not mind blowing but, hey, that was a start. Code was pretty simple:
+<img loading="lazy" src="/wp-content/uploads/2018/03/shim_01.png" width="1024" />  
+Results were not mind blowing but, hey, that was a start. Code was pretty simple:
 
-<pre>//w = canvas width
-  //h = canvas height
-  //F = pixels skipped. At F=1 we would compute the real value each pixel, at 2, we would compute at every 2 pixels, and so on..
+```javascript
+//w = canvas width
+//h = canvas height
+//F = pixels skipped. At F=1 we would compute the real value each pixel, at 2, we would compute at every 2 pixels, and so on..
 // where the camera is and where the camera is looking
 origin=[0,0,-1000]
 dst  =[0,0,1000]
@@ -66,11 +67,12 @@ fov = 90
     v[1] += vv[1] * F
     v[2] += vv[2] * F
   }
-</pre>
+```
 
 Functions u & x are two small utilities to calculate the unit vector and cross product:
 
-<pre>function u(v) {
+```javascript
+function u(v) {
   m = Math.sqrt(v[0] * v[0] + v[1] * v[1] + v[2] * v[2])
   v[0]/=m
   v[1]/=m
@@ -83,11 +85,12 @@ function x(u,v) {
   k[2]=u[0]*v[1] - u[1]*v[0]
   return k
 }
-</pre>
+```
 
 and the intersection code was straightforward:
 
-<pre>function it(o, d) {
+```javascript
+function it(o, d) {
   os = -1
   maxt = 100000000.0
   for(k=0;k0) {
@@ -101,22 +104,24 @@ and the intersection code was straightforward:
   }
   return [os, maxt]
 }
-</pre>
+```
 
 Shading was trivial as well (if we can even call it shading):
 
-<pre>os = it(origin, d)
+```javascript
+os = it(origin, d)
 if(os[0] != -1) {
   c.fillStyle='#fff'
 } else {
   c.fillStyle='#28A'
 }
-</pre>
+```
 
 Draw it white if there is an intersection or background-blueish if it isn&#8217;t.  
 Now that we get the basics in place, let&#8217;s add more spheres, colors and some shading:
 
-<pre>os = it(origin, d)
+```javascript
+os = it(origin, d)
 if(os[0] != -1) {
   // point of intersection: origin + direction ray * t
   ol=[origin[0] + d[0] * os[1],
@@ -158,13 +163,14 @@ if(os[0] != -1) {
 } else {
   c.fillStyle='#28A'
 }
-</pre>
+```
 
 Results are quite &#8216;gouradish&#8217;:  
-<img loading="lazy" class="alignnone size-full wp-image-560" src="/wp-content/uploads/2018/03/shim_02.png" alt="shim_02" width="3096" height="1978" srcset="/wp-content/uploads/2018/03/shim_02.png 3096w, wp-content/uploads/2018/03/shim_02-300x192.png 300w, wp-content/uploads/2018/03/shim_02-768x491.png 768w, wp-content/uploads/2018/03/shim_02-1024x654.png 1024w" sizes="(max-width: 3096px) 100vw, 3096px" />  
+<img loading="lazy" src="/wp-content/uploads/2018/03/shim_02.png" width="1024" />  
 So, let&#8217;s add a specular component to the light:
 
-<pre>// compute the reflection of the ray
+```javascript
+// compute the reflection of the ray
 al=2*(n[0]*d[0]+n[1]*d[1]+n[2]*d[2])
 rx=[d[0] - al * n[0],
     d[1] - al * n[1],
@@ -180,32 +186,23 @@ ls=ls0.0){
   g=g*al+ls
   b=b*al+ls
 }
-</pre>
+```
 
 And here the result:  
-<img loading="lazy" class="alignnone size-full wp-image-561" src="/wp-content/uploads/2018/03/shim_03.png" alt="shim_03" width="3096" height="1978" srcset="/wp-content/uploads/2018/03/shim_03.png 3096w, wp-content/uploads/2018/03/shim_03-300x192.png 300w, wp-content/uploads/2018/03/shim_03-768x491.png 768w, wp-content/uploads/2018/03/shim_03-1024x654.png 1024w" sizes="(max-width: 3096px) 100vw, 3096px" />  
+<img loading="lazy" src="/wp-content/uploads/2018/03/shim_03.png" width="1024" />  
 We can also play with the specular exponent. Below the differences between 20, 8 and 2:
 
-<div id='gallery-1' class='gallery galleryid-558 gallery-columns-3 gallery-size-thumbnail'>
-  <figure class='gallery-item'> 
-  
-  <div class='gallery-icon landscape'>
-    <a href='http://blog.rafols.org/index.php/2018/03/08/looping-js1k-2018-post-mortem/screen-shot-2018-03-08-at-13-41-52/'><img width="150" height="150" src="/wp-content/uploads/2018/03/screen-shot-2018-03-08-at-13-41-52-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" srcset="/wp-content/uploads/2018/03/screen-shot-2018-03-08-at-13-41-52-150x150.png 150w, wp-content/uploads/2018/03/screen-shot-2018-03-08-at-13-41-52-100x100.png 100w" sizes="(max-width: 150px) 100vw, 150px" /></a>
-  </div></figure><figure class='gallery-item'> 
-  
-  <div class='gallery-icon landscape'>
-    <a href='http://blog.rafols.org/index.php/2018/03/08/looping-js1k-2018-post-mortem/screen-shot-2018-03-08-at-13-41-31/'><img width="150" height="150" src="/wp-content/uploads/2018/03/screen-shot-2018-03-08-at-13-41-31-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" srcset="/wp-content/uploads/2018/03/screen-shot-2018-03-08-at-13-41-31-150x150.png 150w, wp-content/uploads/2018/03/screen-shot-2018-03-08-at-13-41-31-100x100.png 100w" sizes="(max-width: 150px) 100vw, 150px" /></a>
-  </div></figure><figure class='gallery-item'> 
-  
-  <div class='gallery-icon landscape'>
-    <a href='http://blog.rafols.org/index.php/2018/03/08/looping-js1k-2018-post-mortem/screen-shot-2018-03-08-at-13-41-16/'><img width="150" height="150" src="/wp-content/uploads/2018/03/screen-shot-2018-03-08-at-13-41-16-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" srcset="/wp-content/uploads/2018/03/screen-shot-2018-03-08-at-13-41-16-150x150.png 150w, wp-content/uploads/2018/03/screen-shot-2018-03-08-at-13-41-16-100x100.png 100w" sizes="(max-width: 150px) 100vw, 150px" /></a>
-  </div></figure>
+<div>
+  <img width="200" src="/wp-content/uploads/2018/03/screen-shot-2018-03-08-at-13-41-52-150x150.png" />
+  <img width="200" src="/wp-content/uploads/2018/03/screen-shot-2018-03-08-at-13-41-31-150x150.png" />
+  <img width="200" src="/wp-content/uploads/2018/03/screen-shot-2018-03-08-at-13-41-16-150x150.png" />
 </div>
 
 So far, things are quite simple, but what would be a raytracer without shadows? Let&#8217;s also add some shadows!  
 As we have one single light, it is quite straightforward, before shading each pixel, trace a ray from the intersection point to the light position. If there is any positive intersection of an object it means that point is occluded and shouldn&#8217;t be shadowed. As we already have the function to calculate intersections written, it also very simple:
 
-<pre>// compute the 't' value of the equation. This will be used as the maximum value for the 't'. Any object further than that will not occlude the light
+```javascript
+// compute the 't' value of the equation. This will be used as the maximum value for the 't'. Any object further than that will not occlude the light
 tl=(ll[2] - ol[2])/rl[2]
 sh=it(ol, rl, tl, os[0])
 // if not intersection, let's shade the pixel normally
@@ -216,13 +213,14 @@ if(sh[0]==-1){
 } else {
   // pixel is shadowed, apply only ambient color
 }
-</pre>
+```
 
 Result starts to look pretty decent:  
-<img loading="lazy" class="alignnone size-full wp-image-562" src="/wp-content/uploads/2018/03/shim_05.png" alt="shim_05" width="3096" height="1978" srcset="/wp-content/uploads/2018/03/shim_05.png 3096w, wp-content/uploads/2018/03/shim_05-300x192.png 300w, wp-content/uploads/2018/03/shim_05-768x491.png 768w, wp-content/uploads/2018/03/shim_05-1024x654.png 1024w" sizes="(max-width: 3096px) 100vw, 3096px" />  
+<img loading="lazy" src="/wp-content/uploads/2018/03/shim_05.png" width="1024" />  
 I&#8217;ve also added another primitive: a horizontal plane:
 
-<pre>if(sl[k*S+7] == 0) {
+```javascript
+if(sl[k*S+7] == 0) {
   ...
   // sphere intersection
   ...
@@ -231,20 +229,22 @@ I&#8217;ve also added another primitive: a horizontal plane:
   vo=-sl[k * S + 0] * o[0] + sl[k * S + 1] * o[1] + sl[k * S + 2] * o[2] + sl[k * S + 3];
   t=vo/vd
 }
-</pre>
+```
 
 Just had to add another entry to the object definition array:
 
-<pre>sl = [1000, 500, 2000, 250000, 0.8, 0.2, 0.3, 0,
+```javascript
+sl = [1000, 500, 2000, 250000, 0.8, 0.2, 0.3, 0,
       -1000, 500, 2000, 250000, 0.3, 0.2, 0.8, 0,
       0, 500, 3000, 250000, 0.3, 0.8, 0.2, 0,
       0, 1, 0, 1000, 0.6, 0.6, 0.6, 1
  ]
-</pre>
+```
 
 Entries in this array have the following meaning:
 
-<pre>// x
+```javascript
+// x
 // y
 // z
 // squared radius (radius * radius) or displacement if primitive is a plane
@@ -252,11 +252,12 @@ Entries in this array have the following meaning:
 // green
 // blue
 // object type (0 - sphere, 1 - horizontal plane)
-</pre>
+```
 
 Normal has to be computed in a different way depending on the primitive type. In the case of the plane I was planning to do a checkerboard, but to save some space I ended up creating stripes:
 
-<pre>r=sl[os[0]*S + 4]
+```javascript
+r=sl[os[0]*S + 4]
 g=sl[os[0]*S + 5]
 b=sl[os[0]*S + 6]
 // normal reset to vertical vector
@@ -279,13 +280,14 @@ if(sl[os[0]*S+7]==0) {
     g=0
   }
 }
-</pre>
+```
 
 Result was the following:  
-<img loading="lazy" class="alignnone size-full wp-image-563" src="/wp-content/uploads/2018/03/shim_07.png" alt="shim_07" width="3096" height="1978" srcset="/wp-content/uploads/2018/03/shim_07.png 3096w, wp-content/uploads/2018/03/shim_07-300x192.png 300w, wp-content/uploads/2018/03/shim_07-768x491.png 768w, wp-content/uploads/2018/03/shim_07-1024x654.png 1024w" sizes="(max-width: 3096px) 100vw, 3096px" />  
+<img loading="lazy" src="/wp-content/uploads/2018/03/shim_07.png" width="1024" />  
 We&#8217;re still missing one key feature of raytracers, reflections! In order to add reflections, we need to create a function that calculates the intersection & computes the resulting color. We&#8217;ll call it recursively:
 
-<pre>// if reflection index is smaller than 3, compute a reflected ray color & merge it with current color (70% + 30%)
+```javascript
+// if reflection index is smaller than 3, compute a reflected ray color & merge it with current color (70% + 30%)
 // we limit the amount of reflections to 3 levels
 if(rc &lt; 3) {
   rxc = cil(ol, rx, rc+1)
@@ -293,14 +295,15 @@ if(rc &lt; 3) {
   g=g*0.7+rxc[1]*0.3
   b=b*0.7+rxc[2]*0.3
 }
-</pre>
+```
 
 By adding reflections, looks slightly better:  
-<img loading="lazy" class="alignnone size-full wp-image-564" src="/wp-content/uploads/2018/03/shim_08.png" alt="shim_08" width="3096" height="1978" srcset="/wp-content/uploads/2018/03/shim_08.png 3096w, wp-content/uploads/2018/03/shim_08-300x192.png 300w, wp-content/uploads/2018/03/shim_08-768x491.png 768w, wp-content/uploads/2018/03/shim_08-1024x654.png 1024w" sizes="(max-width: 3096px) 100vw, 3096px" />  
+<img loading="lazy" src="/wp-content/uploads/2018/03/shim_08.png" width="1024" />  
 Also, as you could see in this last screenshot, there was an small intent of CSG (Constructive Solid Geometry). I added a sphere that was &#8216;substracting&#8217; from other primitives.  
 At the end, I managed to fix the CSG intersection code. In order to make it work we&#8217;ve to calculate both the minimum and the maximum &#8216;t&#8217; of the ray intersection and work out all the different options:
 
-<pre>---- direction ray
+```
+---- direction ray
 * intersection of original object
 # intersection of the subtracting object
 
@@ -316,11 +319,12 @@ trivial case, no intersection (subtracting object is wrapping the whole object)
 5)---------#----*----*---#-------
 intersection would be the exit point of subtracting object (second #)
 6)---------#----*----#---*-------
-</pre>
+```
 
 And the updated intersection code. Used a &#8216;magic&#8217; code -2 to detect we&#8217;re checking the CSG intersection: (Kids don&#8217;t do that at home!)
 
-<pre>var csi=0
+```javascript
+var csi=0
 if(z!=-2 &&t!=t2){
   var csg=it(o,d,maxt,-2)
   if(csg[0]==5) {
@@ -332,11 +336,12 @@ if(z!=-2 &&t!=t2){
     }
   }
 }
-</pre>
+```
 
 In addition, I also added another primitive: a vertical cylinder.
 
-<pre>if(sl[k*S+7] == 0) {
+```javascript
+if(sl[k*S+7] == 0) {
  // sphere intersection
 } else if(sl[k*S+7] == 1) {
  // plane intersection
@@ -353,25 +358,27 @@ In addition, I also added another primitive: a vertical cylinder.
     t2=-(b-b2)/rd2
   }
 }
-</pre>
+```
 
 And here is the result:  
-<img loading="lazy" class="alignnone size-full wp-image-565" src="/wp-content/uploads/2018/03/shim_09.png" alt="shim_09" width="2076" height="1328" srcset="/wp-content/uploads/2018/03/shim_09.png 2076w, wp-content/uploads/2018/03/shim_09-300x192.png 300w, wp-content/uploads/2018/03/shim_09-768x491.png 768w, wp-content/uploads/2018/03/shim_09-1024x655.png 1024w" sizes="(max-width: 2076px) 100vw, 2076px" /> 
+<img loading="lazy" src="/wp-content/uploads/2018/03/shim_09.png"  width="1024" /> 
 
 Unfortunately, after using Uglify (<https://github.com/mishoo/UglifyJS>) and RegPack (<http://siorki.github.io/regPack.html>) the resulting size was over 1600 bytes so I had to start a heavy optimization to get it under 1024. I removed the CSG intersection code :(, simplified the RGB filling color to:
 
-<pre>r=(col[0]*255)|0
+```javascript
+r=(col[0]*255)|0
 g=(col[1]*255)|0
 b=(col[2]*255)|0
 c.fillStyle='rgba('+r+','+g+','+b+',1)'
 c.fillRect(j, i, F, F)
-</pre>
+```
 
 instead of using the hexmap and 16 different shades per component &#8211; I kind of liked it the pixelated/oldschool effect, but it was slightly shorter & definitely faster.  
 After some time optimizing and doing some sacrifices I managed to get it under 1024. It was a pity I couldn&#8217;t spend any more time on it as I would really tried to squeeze the CSG code in! 😉  
 Here is the final source code:
 
-<pre>w=window.innerWidth
+```javascript
+w=window.innerWidth
 K=500
 J=K*K
 E=1000
@@ -469,6 +476,6 @@ setInterval(() =&gt; {
   }
   G+=.02
 }, 10)
-</pre>
+```
 
 and the result can be checked here: <https://js1k.com/2018-coins/demo/3101>
