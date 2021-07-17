@@ -9,7 +9,4 @@ highlighter: rouge
 markdown: kramdown
 kramdown: 
   input: GFM
-  hard_wrap: false
-  block:
-      line_numbers: true
-      start_line: 1
+  syntax_highlighter: rouge
