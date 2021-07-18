@@ -6,9 +6,13 @@ title: Development mumbo jumbo
   {% for post in site.posts %}
     <li>
       <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-      {% if forloop.index < 5 %}
-        {{ post.excerpt }}
+      {% if forloop.index < 12 %}
+        <img src="{{ post.image }}" width="1024" />
+        {{ post.content | strip_html | truncatewords:100 }}
+      {% else %}
+        {{ post.content | strip_html | truncatewords:50 }}
       {% endif %}
+      <hr><br/>
     </li>
   {% endfor %}
 </ul>
