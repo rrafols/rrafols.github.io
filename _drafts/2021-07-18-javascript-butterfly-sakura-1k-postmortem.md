@@ -100,26 +100,59 @@ I started by generating some points of what would be the half shape of the butte
 
 ![Butterfly shape](/wp-content/uploads/2021/07/ButterflySakura04.jpg)
 
-And mirror them to draw the whole shape
+```javascript
+// butterfly points (x, y, x, y, ...)
+points = [30, 19, 20, 10, 13, 6, 8, 5, 4, 6, 3, 8, 3, 12, 8, 20, 8, 23, 10, 25, 13, 26, 27, 26, 20, 27, 15, 28, 11, 31, 10, 35, 12, 42, 16, 47, 21, 46, 26, 44, 29, 38, 30, 31]
+```
 
+Mirroring these points horizontally we can draw the whole shape (not the best drawn butterfly in world though - but hopefully good enough for 1k of javascript code):
 ![Butterfly shape](/wp-content/uploads/2021/07/ButterflySakura05.jpg)
 
-Transformed and encoded as chars to be smaller:
+
+For size purposes, points were transformed and encoded as `chars` to be smaller (this is a preprocess, did not end up on the final code):
+```javascript
+points = [30, 19, 20, 10, 13, 6, 8, 5, 4, 6, 3, 8, 3, 12, 8, 20, 8, 23, 10, 25, 13, 26, 27, 26, 20, 27, 15, 28, 11, 31, 10, 35, 12, 42, 16, 47, 21, 46, 26, 44, 29, 38, 30, 31]
+
+str = ""
+for(i = 0; i < points.length; i++) {
+  // 33 to map it to visible chars after space
+  // 66 adjust for a lower case ascii string
+  // points are divided by 2 - losing a bit of precision in the process
+  // but for space optimization purposes
+  str += String.fromCharCode(33 + 66 + ((points[i]/2)|0))
+}
+
+console.log('p="'+str+'"')
+```
+
+and, when drawing the butterflies, `chars` are decoded again into coordinates by substracting 99 and then multiplying by 20 to get an adequate size.
 
 ```javascript
 p = "rlmhifgeefdgdigmgnhoipppmpjqhrhtixkzmzpyqvrr"
 
+// iterate twice the amount of data
 for(i = 0; i < 88; ) {
-  // using modulo to loop over the data twice without overlowing the array
+  // using modulo to loop over the index and avoid overlowing the array
   x = -(p.charCodeAt(i++%44) - 99) * 20
   y = (p.charCodeAt(i++%44) - 99) * 20
-  // points were transformed by adding 99 and there is a small size adjustment here by multiplying the size by 20.
 
   // mirror x coordinate if second half of data
   x = i<44 ? x : -630 - x
 }
 ```
 
-For the butterfly movement, I wanted them to move in a spiral like movement:
+To get some butterflies on the screen, I randomized their position (on the top part only):
+```javascript
+for(i = 0; i < 607; i++) {
+  B[i] = [Math.random()*900 - 450, -Math.random()*600]
+}
+```
+![Butterfly initial position](/wp-content/uploads/2021/07/ButterflySakura08.jpg)
 
+For the movement, I wanted them to move in a spiral like path from their starting point:
 ![Butterfly initial movement](/wp-content/uploads/2021/07/ButterflySakura06.gif)
+
+
+
+![Butterfly initial movement](/wp-content/uploads/2021/07/ButterflySakura07.gif)
+
