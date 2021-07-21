@@ -152,7 +152,87 @@ for(i = 0; i < 607; i++) {
 For the movement, I wanted them to move in a spiral like path from their starting point:
 ![Butterfly initial movement](/wp-content/uploads/2021/07/ButterflySakura06.gif)
 
+but also rotated so they face the direction they are going:
+```javascript
+  C = Math.cos(f)
+  S = Math.sin(f)
+
+// rotate the x & z coordinates by the Y axis
+  xr = x * C - z * S
+  zr = x * S + z * C
+```
+
+and adding the radius and some `z-offset`, gives us the following result:
+```javascript
+  C = Math.cos(f)
+  S = Math.sin(f)
+
+  // z-offset 6500 (displace all points further from the camera)
+  // horizontal rotation radius is wider than depth rotation radius
+  xr = x * C - z * S + 3*radius * C
+  zr = x * S + z * C + radius * S + 6500
+```
+![Butterfly  movement](/wp-content/uploads/2021/07/ButterflySakura09.gif)
+
+Also, we need to add some _flapping_ to the wings, for that instead of having a constant flat `y` coordinate, let's modify it based on `x` coordinate and time (`t`):
+```javascript
+  // 80 is the strength of the 'flap'
+  y = 80 * Math.sin(x / 200 + t * .1)
+```
+
+see the animation in action:
+![Butterfly  movement](/wp-content/uploads/2021/07/ButterflySakura11.gif)
+
+and the final animation for each single buttefly:
+![Butterfly  movement](/wp-content/uploads/2021/07/ButterflySakura10.gif)
+
+If we put all together, with the randomized butterfly positions, this is the result:
+
+```javascript
+// draw butterflies
+for(k = 0; k < 607; k++) {
+  c.beginPath()
+  for(i = 0; i < 80; ) {
+                        
+    x = -(p.charCodeAt(i++%44) - 99) * 20
+    z = -(p.charCodeAt(i++%44) - 99) * 20
+    
+
+    x = i<44 ? x : -630 - x
+
+    butterflyTime = Math.max(t - 20 * k, 0)
+    angle = butterflyTime ? butterflyTime / 80 : 0
+    
+    y = (butterflyTime ? 80*Math.sin((x + k) / 200 + t * .1) : 0)
+    
+    radius = Math.min(150 * angle, 2000)
+    C = Math.cos(angle)
+    S = Math.sin(angle)
+
+    xr = x * C - z * S + 3*radius * C
+    zr = x * S + z * C + radius * S + 6500
+
+    //500 is a FOV for doing the 3D to 2D projection
+    c.lineTo(
+      500 * (B[k][0] + xr) / zr + w/2, 
+      500 * (B[k][1] + y) / zr + h/2)
+  }
+  c.fill()
+}
+```
+
+![Multiple butterfly movement](/wp-content/uploads/2021/07/ButterflySakura07.gif)
+
+Time-based movement of the butterfly is modified with the index and some negative offset, so they do not start moving at the same time:
+```javascript
+  // index is the butterfly index in the array
+  butterflyTime = Math.max(t - 20 * index, 0)
+
+  //angle is 0 if butterflyTime is below or equal to 0
+  angle = butterflyTime ? butterflyTime / 80 : 0
+```
+
+Let's park the butteflies for a moment and let's focus on the tree
 
 
-![Butterfly initial movement](/wp-content/uploads/2021/07/ButterflySakura07.gif)
 
