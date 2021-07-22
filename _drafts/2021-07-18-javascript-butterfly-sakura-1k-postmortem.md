@@ -106,6 +106,7 @@ points = [30, 19, 20, 10, 13, 6, 8, 5, 4, 6, 3, 8, 3, 12, 8, 20, 8, 23, 10, 25, 
 ```
 
 Mirroring these points horizontally we can draw the whole shape (not the best drawn butterfly in world though - but hopefully good enough for 1k of javascript code):
+
 ![Butterfly shape](/wp-content/uploads/2021/07/ButterflySakura05.jpg)
 
 
@@ -181,9 +182,11 @@ Also, we need to add some _flapping_ to the wings, for that instead of having a 
 ```
 
 see the animation in action:
+
 ![Butterfly  movement](/wp-content/uploads/2021/07/ButterflySakura11.gif)
 
 and the final animation for each single buttefly:
+
 ![Butterfly  movement](/wp-content/uploads/2021/07/ButterflySakura10.gif)
 
 If we put all together, with the randomized butterfly positions, this is the result:
