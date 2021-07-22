@@ -235,7 +235,71 @@ Time-based movement of the butterfly is modified with the index and some negativ
   angle = butterflyTime ? butterflyTime / 80 : 0
 ```
 
-Let's park the butteflies for a moment and let's focus on the tree
+Let's park the butteflies for a moment and let's focus on the tree. I wanted to do something very simple but with good results. I thought on a recursive tree I used on a presentation I did back on Oracle Code One 2019:
 
+[Rendering Art on the Web - A performance compendium
+![Rendering Art on the Web - A performance compendium](/wp-content/uploads/2021/07/ButterflySakura12.png)](https://www.slideshare.net/RaimonRls/rendering-art-on-the-web-a-performance-compendium)
 
+but with some adaptations, definitely not performance optimized, unbalanced and decreasing branch size:
 
+```javascript
+// draw a recursive tree
+tree = (x, y, l, n=0, i=0) => {
+  // reduce line width on each level (wide base, thinner branches)
+  // increase level by one
+  c.lineWidth = 20 / ++i
+
+  n += Math.cos(t * .01) * .01
+
+  // calculate end coordinates based on length * sin/cos angle.
+  // these will be used as starting point for sub-branches
+  let x1 = x + l * Math.sin(n)
+  let y1 = y - l * Math.cos(n)
+
+  c.beginPath()
+  c.moveTo(x, y)
+  c.lineTo(x1, y1)
+  c.stroke()
+
+  // reduce length on each level
+  l *= .7
+
+  // recursivelly draw branches depending (unbalanced on purpose)
+  if(i<7) tree(x1, y1, l, n - 1, i)
+  if(i<5) tree(x1, y1, l, n + 1, i)
+  if(i<7) tree(x1, y1, l, n + .4, i)
+}
+```
+
+Temporarily removing the butterflies and adding calling this method on the drawing loop:
+```javascript
+  c.strokeStyle = '#f8c'
+  c.globalAlpha = .5
+  tree(w/2, h/2, h/8)
+```
+
+give us the following result:
+
+![Rendered tree](/wp-content/uploads/2021/07/ButterflySakura13.png)
+
+Let's now change the code to generate the butterflies at each branch node and remove the random position code from before:
+
+```javascript
+  ...
+  let x1 = x + l * Math.sin(n)
+  let y1 = y - l * Math.cos(n)
+
+  // add butterfly coordinates (centered on the middle of the screen)
+  B[k++] = [x1 - w/2, y1 - h/2]
+
+  c.beginPath()
+  c.moveTo(x, y)
+  ...
+```
+Now it is starting to look better:
+
+![Rendered tree with butterflies](/wp-content/uploads/2021/07/ButterflySakura14.gif)
+
+with the end result, after all butterflies have departed form their original position:
+
+![Butterflies circling the tree](/wp-content/uploads/2021/07/ButterflySakura15.gif)
