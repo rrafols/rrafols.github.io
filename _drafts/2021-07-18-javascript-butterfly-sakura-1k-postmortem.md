@@ -15,6 +15,9 @@ tags:
 ---
 As usual I love to take part on the javascript 1k code golfing competitions and this year was no different, so I managed to do something for 2021 edition the [js1024.fun](https://js1024.fun/demos/2021).
 
+The submitted version can be seen directly here:
+[1k Butterfly Sakura](https://js1024.fun/demos/2021#26), a slightly fixed and updated version here (still under 1k): [1k Butterfly Sakura - update](https://github.com/rrafols) and the source code: [1k Butterfly Sakura source](https://github.com/rrafols/js1024_sakura)
+
 I took inspiration on a Unity3D Experiment by [Max Gittel](https://twitter.com/maxSigma_) I saw in the past, but to recreate it (more or less) in 1k. The original experiment can be seen here in action [![Original Butterfly Sakura](/wp-content/uploads/2021/07/ButterflySakura01_original.jpeg)](https://twitter.com/maxSigma_/status/1264900383081664514)
 
 https://twitter.com/maxSigma_/status/1264900383081664514)
@@ -303,3 +306,65 @@ Now it is starting to look better:
 with the end result, after all butterflies have departed form their original position:
 
 ![Butterflies circling the tree](/wp-content/uploads/2021/07/ButterflySakura15.gif)
+
+Now let's talk about the blurred reflection, I wanted to simply render everything twice with a `c.scale(1, -1)` to mirror it vertically, but it was already using too much CPU to render and I'll miss the blur part. So decided to take an alternative approach... Use another canvas to render what has to be mirrored and draw it twice on the screen with a `blur` filter on the bottom part:
+
+```javascript
+  // create an auxiliar canvas to draw the reflection
+  q = d.createElement`canvas`
+  v = q.getContext`2d`
+
+  // a is the original canvas
+  w = a.width
+  h = a.height
+
+  // set the auxiliar canvas to the same height as the original one
+  q.height = h
+
+  ...
+
+setInterval(_=>{
+    // clear screen and set width to both canvas
+    a.width = q.width = w
+
+    ... render everything
+
+    // draw butterflies & tree from one canvas to the main one and their reflection
+    // i-- substracts from i and serves as loop condition while i != 0
+    for(i = 2; i--; ) {
+      c.save()
+
+      if (i) {
+        // for the refletion, set a blur filter and inverted vertical scale
+        c.filter = 'blur(2px)'
+        c.scale(1,-1)
+      }
+
+      c.drawImage(q,0,-i*h)
+      c.restore()
+    }
+
+    ...
+
+    })
+```
+
+![Reflection result](/wp-content/uploads/2021/07/ButterflySakura00.jpg)
+
+One last touch I wanted to do is to randomize the flight of the butterflies, as they start flying in order right now. For this, I created a helper array with simply a randomize set of indexes:
+
+```javascript
+//randomize indexes so butterflies start flying randomly
+o = [...Array(607).keys()].sort(_ => .5 - Math.random())
+```
+
+and update the method that draws the tree, and sets the butterfly position, to use this random index:
+
+```javascript
+  // instead of B[k++] = [x1 - w/2, y1 - h/2]
+  B[o[k++]] = [x1 - w/2, y1 - h/2]
+```
+
+Seems the random function for the sorting is not fully working on Firefox. Talking about issues with Firefox, although it is working fine on Mac, it does not seem to like any clipping, tranformation or filter together with the _lighter_ `globalCompositeOperation`, giving a strange pinkish result on the reflection:
+
+![Firefox issue](/wp-content/uploads/2021/07/ButterflySakura16.png)
