@@ -16,7 +16,7 @@ tags:
 As usual I love to take part on the javascript 1k code golfing competitions and this year was no different, so I managed to do something for 2021 edition the [js1024.fun](https://js1024.fun/demos/2021).
 
 The submitted version can be seen directly here:
-[1k Butterfly Sakura](https://js1024.fun/demos/2021#26), a slightly fixed and updated version here (still under 1k): [1k Butterfly Sakura - update](https://github.com/rrafols) and the source code: [1k Butterfly Sakura source](https://github.com/rrafols/js1024_sakura)
+[1k Butterfly Sakura](https://js1024.fun/demos/2021#26), a slightly fixed and updated version here: [1k Butterfly Sakura - update](https://rrafols.github.io/js1024_sakura) and the source code: [1k Butterfly Sakura source](https://github.com/rrafols/js1024_sakura)
 
 I took inspiration on a Unity3D Experiment by [Max Gittel](https://twitter.com/maxSigma_) I saw in the past, but to recreate it (more or less) in 1k. The original experiment can be seen here in action [![Original Butterfly Sakura](/wp-content/uploads/2021/07/ButterflySakura01_original.jpeg)](https://twitter.com/maxSigma_/status/1264900383081664514)
 
