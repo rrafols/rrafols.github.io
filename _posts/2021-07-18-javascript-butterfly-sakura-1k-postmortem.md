@@ -13,7 +13,8 @@ tags:
   - demoscene
   - Javascript
 ---
-As usual I love to take part on the javascript 1k code golfing competitions and this year was no different, so I managed to do something for 2021 edition the [js1024.fun](https://js1024.fun/demos/2021).
+As usual, I love to take part on the javascript 1k code golfing competitions and this year was no different, so I managed to do something for 2021 edition the [js1024.fun](https://js1024.fun/demos/2021).
+
 
 The submitted version can be seen directly here:
 [1k Butterfly Sakura](https://js1024.fun/demos/2021#26), a slightly fixed and updated version here: [1k Butterfly Sakura - update](https://rrafols.github.io/js1024_sakura) and the source code: [1k Butterfly Sakura source](https://github.com/rrafols/js1024_sakura)
